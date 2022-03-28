@@ -19,3 +19,16 @@ func TestNewJob(t *testing.T) {
 	require.NotNil(t, job)
 	require.Nil(t, err)
 }
+
+func TestJobIsInvalid(t *testing.T) {
+	video := domain.NewVideo()
+	video.ID = uuid.NewV4().String()
+	video.FilePath = "Path"
+	video.CreatedAt = time.Now()
+
+	job, err := domain.NewJob("", "Converted", video)
+
+	require.NotNil(t, err)
+	require.Nil(t, job)
+	require.Error(t, err)
+}
