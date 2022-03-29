@@ -3,6 +3,9 @@ FROM golang:1.18.0-alpine3.15
 ENV BENTO4_BIN="/opt/bento4/bin" \
     PATH="$PATH:/opt/bento4/bin"
 
+RUN export CGO_CFLAGS="-g -O2 -Wno-return-local-addr"
+
+
 RUN apk add --update ffmpeg bash curl make
 
 

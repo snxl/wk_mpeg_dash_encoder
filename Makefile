@@ -2,6 +2,6 @@ server:
 	go run framework/cmd/server/server.go
 
 test:
-	go test -cover ./...
+	go test ./...
 
-.PHONY: server test
+.PHONY: test server
