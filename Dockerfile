@@ -24,7 +24,7 @@ RUN apk add --update --upgrade curl python3 unzip bash gcc g++ cmake && \
     cd ${BENTO4_PATH} && \
     mkdir bin utils && \
     cd ./bin  && cmake -DCMAKE_BUILD_TYPE=Release .. && cmake --build . --config Release && cd .. && \
-    cp -R ${BENTO4_PATH}/Source/Python/utils ${BENTO4_PATH}/utils && \
+    cp -R ${BENTO4_PATH}/Source/Python/utils ${BENTO4_PATH} && \
     cp -a ${BENTO4_PATH}/Source/Python/wrappers/. ${BENTO4_PATH}/bin
 
 
