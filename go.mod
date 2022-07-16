@@ -9,6 +9,7 @@ require (
 	github.com/joho/godotenv v1.4.0
 	github.com/lib/pq v1.10.6
 	github.com/satori/go.uuid v1.2.0
+	github.com/streadway/amqp v1.0.0
 	github.com/stretchr/testify v1.8.0
 )
 

@@ -3,3 +3,4 @@
 bucket-credential.json
 .pgdata
 .devcontainer
+.docker

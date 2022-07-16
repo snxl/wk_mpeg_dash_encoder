@@ -48,7 +48,6 @@ func (vu *VideoUpload) UploadObject(objectPath string, client *storage.Client, c
 func (vu *VideoUpload) loadPaths() error {
 
 	err := filepath.Walk(vu.VideoPath, func(path string, info os.FileInfo, err error) error {
-
 		if !info.IsDir() {
 			vu.Paths = append(vu.Paths, path)
 		}
